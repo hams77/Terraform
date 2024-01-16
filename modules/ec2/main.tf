@@ -5,31 +5,18 @@ resource "aws_instance" "main" {
     associate_public_ip_address = true
     vpc_security_group_ids = [var.sg_id]
     key_name = var.key_name
-
-    
-
-
-
-
-
-
-
+associate_public_ip_address = true
+monitoring           =   var.monitoring
+  ebs_optimized = var.ebs_optimized
+  associate_public_ip_address = var.associate_public_ip_address
+  metadata_options = var.metadata_options
   tags = merge(
     var.tags,
-
-  {
-    Name = "jenkinsagent"
-    Name = "jenkinsmaster"
-    Name = "ec2appserver"
-  
-  },
+ {
+Name = "jenkinsagent"
+Name = "jenkinsmaster"
+Name = "ec2appserver"
+ },
   )
 
 
-}  
-
-
-
-  
-  
- 
