@@ -63,3 +63,9 @@ variable "associate_public_ip_address" {
   type        = bool
   default     = null
 }
+
+variable "iam_instance_profile" {
+  description = "IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile"
+  type        = string
+  default     = null
+}

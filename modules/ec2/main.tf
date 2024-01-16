@@ -21,5 +21,5 @@ Name = "jenkinsmaster"
 Name = "ec2appserver"
  },
   )
-
+iam_instance_profile   = var.iam_instance_profile
 }
