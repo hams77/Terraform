@@ -1,5 +1,8 @@
 resource "aws_instance" "main" {
     instance_type = var.instance_type
+	root_block_device {
+	encrypted =true
+	}
     ami = var.ami
     subnet_id = var.subnet_id
     
